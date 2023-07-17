@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import dev.prabhatpandey.playflix.core.presentation.RootScreen
 import dev.prabhatpandey.playflix.core.ui.theme.PlayFlixTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,50 +30,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Column {
-                        Greeting("Android")
-                        Card(
-                            modifier = Modifier
-                                .fillMaxWidth(0.7f)
-                                .height(100.dp)
-                                .padding(vertical = 16.dp)
-                        ) {
-                            Text(text = "Card Sample")
-                        }
-
-                        Button(
-                            onClick = { /*TODO*/ },
-                            modifier = Modifier
-                                .fillMaxWidth(0.7f)
-                                .padding(vertical = 24.dp)
-                        ) {
-                            Text(text = "Button Sample")
-                        }
-                        Surface(modifier = Modifier
-                            .fillMaxWidth(0.7f)
-                            .padding(16.dp)) {
-                            Text(text = "Surface Sample")
-                        }
-
-                    }
+                   RootScreen()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    PlayFlixTheme {
-        Greeting("Android")
     }
 }
